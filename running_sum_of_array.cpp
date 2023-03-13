@@ -25,3 +25,20 @@
 // 1 <= nums.length <= 1000
 // -10^6 <= nums[i] <= 10^6
 
+#include <vector>
+using namespace std;  
+class Solution
+{
+
+public:
+    vector<int> runningSum(vector<int> &nums)
+    {
+        for (int i = 1; i < nums.size(); i++)
+        {
+
+            nums[i] += nums[i - 1];
+        }
+
+        return nums;
+    }
+};
