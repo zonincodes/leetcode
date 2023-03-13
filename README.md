@@ -1,2 +1,2 @@
 # Leetcode Solutions
-1. Runnung sum a number array
+1. Running sum a number array
