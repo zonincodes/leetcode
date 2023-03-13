@@ -45,6 +45,22 @@ public:
         // compare the wealth of each account
 
         int total = 0;
+        int i = 0;
+       
+
+        while(i < accounts.size()){
+            int current_total = 0;
+            int j = 0;
+            while(j < accounts[i].size()){
+                current_total += accounts[i][j];
+                j++;
+            }
+
+            if(current_total > total){
+                total = current_total;
+            }
+            i++;
+        }
 
         for (vector<int> customer : accounts)
         {
