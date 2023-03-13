@@ -46,32 +46,18 @@ public:
 
         int total = 0;
         int i = 0;
-       
-
-        while(i < accounts.size()){
-            int current_total = 0;
-            int j = 0;
-            while(j < accounts[i].size()){
-                current_total += accounts[i][j];
-                j++;
+        for(int i = 0; i < accounts.size(); i++){
+            int total_acc = 0;
+            for(int j = 0; j < accounts[i].size(); j++){
+                total_acc += accounts[i][j];
             }
 
-            if(current_total > total){
-                total = current_total;
+            if(total_acc > total){
+                total = total_acc;
             }
-            i++;
         }
 
-        for (vector<int> customer : accounts)
-        {
-            int customer_wealth = 0;
-            for (int amt : customer)
-            {
-                customer_wealth += amt;
-            }
-
-            total = customer_wealth > total ? customer_wealth : total;
-        }
+        
 
         return total;
     }
