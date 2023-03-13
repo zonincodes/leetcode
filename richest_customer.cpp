@@ -33,3 +33,30 @@
 // n == accounts[i].length
 // 1 <= m, n <= 50
 // 1 <= accounts[i][j] <= 100
+
+#include <vector>
+using namespace std;
+class Solution
+{
+public:
+    int maximumWealth(vector<vector<int>> &accounts)
+    {
+        // find the total for each customer
+        // compare the wealth of each account
+
+        int total = 0;
+
+        for (vector<int> customer : accounts)
+        {
+            int customer_wealth = 0;
+            for (int amt : customer)
+            {
+                customer_wealth += amt;
+            }
+
+            total = customer_wealth > total ? customer_wealth : total;
+        }
+
+        return total;
+    }
+};
