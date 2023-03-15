@@ -10,3 +10,10 @@ struct Node{
         age = a;
     }
 };
+
+int main(){
+    Node node1("Roger", 20), node2(node1);
+
+    cout << node1.name << " " << node1.age << " " << node2.name << " " << node2.age << endl; 
+    return 0;
+}
