@@ -4,7 +4,7 @@
 using namespace std;
 
 class Class1;
-
+class Class2;
 int main()
 {
 
@@ -16,5 +16,17 @@ class Class1 {
     public: 
         virtual void f() {
             cout << "Function f() in Class1\n" ;
+        }
+};
+
+
+class Class2 {
+    public:
+        virtual void f() {
+            cout << "Function f() in Class2 \n";
+        }
+
+        void g() {
+            cout << "Function g() in Class2 \n";
         }
 };
