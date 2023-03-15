@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-
-
+void swap(int i, int *j, int &k);
 int main () {
 
     int n = 5, *p = &n, &r =n;
@@ -24,5 +23,17 @@ int main () {
     // variables.This is no accident because, as mentioned, reference variables are 
     // implemented as constant pointers.
     
+    int i = 3, j = 23, k = 32; 
+
+    cout << "Intially : " << i << " " << j << " " << k << endl; 
+    swap(i, &j, k);
+    cout << "After Swap : " << i << " " << j << " " << k << endl;
+
     return 0;
+}
+
+void swap(int i, int *j, int &k){
+    i = 1;
+    *j = 2;
+    k = 3;
 }
