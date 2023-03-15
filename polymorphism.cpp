@@ -5,6 +5,7 @@ using namespace std;
 
 class Class1;
 class Class2;
+class Class3;
 int main()
 {
 
@@ -28,5 +29,12 @@ class Class2 {
 
         void g() {
             cout << "Function g() in Class2 \n";
+        }
+};
+
+class Class3 {
+    public:
+        virtual void f() {
+            cout << "Function f() in Class3 \n";
         }
 };
