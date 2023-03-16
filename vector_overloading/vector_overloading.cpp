@@ -40,11 +40,16 @@ class Person {
             return !(*this == p) && !(*this < p);
         }
 
+        
     private:
         char *name;
         int age;
         friend bool lesserAge(const Person &, const Person &);
 };
+bool lesserAge(const Person &p1, const Person &p2)
+{
+        return p1.age < p2.age;
+}
 
 int main()
 {
@@ -56,7 +61,7 @@ int main()
         v6.push_back(Person("Bill", 20));
 
         //  executing
-        sort(v6.begin(), v6.end());
+        sort(v6.begin(), v6.end(), lesserAge);
 
         for (Person p : v6)
         {
